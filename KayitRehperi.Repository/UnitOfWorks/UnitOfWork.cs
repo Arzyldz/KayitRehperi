@@ -1,14 +1,16 @@
-﻿using KayitRehperi.Core.UnitOfWorks;
+﻿
+using KayitRehperi.Core.UnitOfWorks;
+using Microsoft.EntityFrameworkCore;
 
 namespace KayitRehperi.Repository.UnitOfWorks
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly AppIdentityDbContext _context;
+        private readonly DbContext _context;
 
-        public UnitOfWork(AppIdentityDbContext context)
+        public UnitOfWork(AppIdentityDbContext appDbContext)
         {
-            _context = context;
+            _context = appDbContext;
         }
 
         public void Commit()
@@ -16,7 +18,7 @@ namespace KayitRehperi.Repository.UnitOfWorks
             _context.SaveChanges();
         }
 
-        public async Task CommitAsync()
+        public async Task CommmitAsync()
         {
             await _context.SaveChangesAsync();
         }

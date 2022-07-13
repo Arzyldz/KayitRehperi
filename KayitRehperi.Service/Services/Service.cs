@@ -20,14 +20,14 @@ namespace KayitRehperi.Service.Services
         public async Task<T> AddAsync(T entity)
         {
             await _repository.AddAsync(entity);
-            await _unitOfWork.CommitAsync();
+            await _unitOfWork.CommmitAsync();
             return entity;
         }
 
         public async Task<IEnumerable<T>> AddRangeAsync(IEnumerable<T> entities)
         {
             await _repository.AddRangeAsync(entities);
-            await _unitOfWork.CommitAsync();
+            await _unitOfWork.CommmitAsync();
             return entities;
         }
 
@@ -55,19 +55,19 @@ namespace KayitRehperi.Service.Services
         public async Task RemoveAsync(T entity)
         {
             _repository.Remove(entity);
-            await _unitOfWork.CommitAsync();
+            await _unitOfWork.CommmitAsync();
         }
 
         public async Task RemoveRangeAsync(IEnumerable<T> entities)
         {
             _repository.RemoveRange(entities);
-            await _unitOfWork.CommitAsync();
+            await _unitOfWork.CommmitAsync();
         }
 
         public async Task UpdateAsync(T entity)
         {
             _repository.Update(entity);
-            await _unitOfWork.CommitAsync();
+            await _unitOfWork.CommmitAsync();
         }
 
         public IQueryable<T> Where(Expression<Func<T, bool>> expression)

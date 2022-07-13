@@ -2,9 +2,9 @@
 {
     public interface IUnitOfWork
     {
-        Task CommitAsync();
-        void Commit();
+        Task CommmitAsync();
 
+        void Commit();
 
     }
 }
