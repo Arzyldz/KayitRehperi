@@ -1,4 +1,3 @@
-
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using KayitRehperi.API.Filters;
@@ -16,9 +15,9 @@ using KayitRehperi.Service.Mapping;
 using KayitRehperi.Service.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using SharedLibrary.Configurations;
 using SharedLibrary.Extensions;
-using System.Configuration;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -43,8 +42,8 @@ builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepositor
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 //builder.Services.AddAutoMapper(typeof(MapProfile));
-//builder.Services.Configure<RabbitMQOptions>(configuration.GetSection("RabbitMQ"));
-//builder.Services.AddHostedService<EmailSenderWorker>();
+builder.Services.Configure<RabbitMQOptions>(builder.Configuration.GetSection("RabbitMQ"));
+builder.Services.AddHostedService<EmailSenderWorker>();
 
 builder.Services.AddDbContext<AppIdentityDbContext>(x =>
 {
@@ -64,7 +63,10 @@ builder.Host.UseServiceProviderFactory
     (new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder => containerBuilder.RegisterModule(new RepoServiceModule()));
 
-
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "KayitRehperi.API", Version = "v1" });
+});
 
 var app = builder.Build();
 
@@ -76,7 +78,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseCustomException();
+//app.UseCustomException();
 
 app.UseRouting();
 app.UseAuthentication();
