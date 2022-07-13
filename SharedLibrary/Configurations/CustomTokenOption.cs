@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace KayitRehperi.Configurations
+namespace SharedLibrary.Configurations
 {
     public class CustomTokenOption
     {

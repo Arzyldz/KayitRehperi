@@ -12,8 +12,9 @@ using KayitRehperi.Core.Configuration;
 using KayitRehperi.Core.DTOs;
 using KayitRehperi.Core.Models;
 using KayitRehperi.Core.Services;
-using KayitRehperi.Configurations;
+
 using KayitRehperi.Services;
+using SharedLibrary.Configurations;
 
 namespace KayitRehperi.Service.Services
 {
@@ -47,6 +48,8 @@ namespace KayitRehperi.Service.Services
             new Claim(ClaimTypes.NameIdentifier,userApp.Id),
             new Claim(JwtRegisteredClaimNames.Email, userApp.Email),
             new Claim(ClaimTypes.Name,userApp.UserName),
+            new Claim(ClaimTypes.Role,"Admin"),
+            new Claim(ClaimTypes.Role,"Editor"),
             new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString())
             };
 

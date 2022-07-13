@@ -11,12 +11,14 @@
     <PackageReference Include="Autofac" Version="6.4.0" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\KayitRehperi.EmailSenderWorkerService\KayitRehperi.EmailSenderWorkerService.csproj" />
     <ProjectReference Include="..\KayitRehperi.Repository\KayitRehperi.Repository.csproj" />
     <ProjectReference Include="..\KayitRehperi.Service\KayitRehperi.Service.csproj" />
+    <ProjectReference Include="..\SharedLibrary\SharedLibrary.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,11 +1,13 @@
 ﻿using AutoMapper;
 using KayitRehperi.Core.DTOs;
 using KayitRehperi.Core.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KayitRehperi.API.Controllers
 {
+    [Authorize(Roles="Admin")]
     public class CustomerController : CustomBaseController
     {
         private readonly ICustomerService _cutomerService;
