@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KayitRehperi.API", "KayitRehperi.API\KayitRehperi.API.csproj", "{08AA836C-7293-44A5-89C8-3DFDB5571DFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KayitRehperi.Repository", "KayitRehperi.Repository\KayitRehperi.Repository.csproj", "{3F5B648A-A26B-4E85-A95B-B24758F34C9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KayitRehperi.Service", "KayitRehperi.Service\KayitRehperi.Service.csproj", "{AC859E2C-1C60-4383-A941-F2587166C8F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KayitRehperi.Core", "KayitRehperi.Core\KayitRehperi.Core.csproj", "{E335B9DC-3A59-41C1-A51C-2AA597605F7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KayitRehperi.EmailSenderWorkerService", "KayitRehperi.EmailSenderWorkerService\KayitRehperi.EmailSenderWorkerService.csproj", "{C3454456-8237-4FD5-B99E-C177B2684014}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08AA836C-7293-44A5-89C8-3DFDB5571DFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08AA836C-7293-44A5-89C8-3DFDB5571DFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08AA836C-7293-44A5-89C8-3DFDB5571DFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08AA836C-7293-44A5-89C8-3DFDB5571DFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F5B648A-A26B-4E85-A95B-B24758F34C9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F5B648A-A26B-4E85-A95B-B24758F34C9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F5B648A-A26B-4E85-A95B-B24758F34C9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F5B648A-A26B-4E85-A95B-B24758F34C9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC859E2C-1C60-4383-A941-F2587166C8F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC859E2C-1C60-4383-A941-F2587166C8F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC859E2C-1C60-4383-A941-F2587166C8F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC859E2C-1C60-4383-A941-F2587166C8F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E335B9DC-3A59-41C1-A51C-2AA597605F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E335B9DC-3A59-41C1-A51C-2AA597605F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E335B9DC-3A59-41C1-A51C-2AA597605F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E335B9DC-3A59-41C1-A51C-2AA597605F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3454456-8237-4FD5-B99E-C177B2684014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3454456-8237-4FD5-B99E-C177B2684014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3454456-8237-4FD5-B99E-C177B2684014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3454456-8237-4FD5-B99E-C177B2684014}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF30215B-F5DC-4434-8674-652CD659D592}
+	EndGlobalSection
+EndGlobal
