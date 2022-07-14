@@ -1,7 +1,6 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using KayitRehperi.API.Filters;
-using KayitRehperi.API.Middlewares;
 using KayitRehperi.API.Modules;
 using KayitRehperi.Core.Models;
 using KayitRehperi.Core.Repositories;
@@ -78,7 +77,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-//app.UseCustomException();
+app.UseCustomException();
 
 app.UseRouting();
 app.UseAuthentication();

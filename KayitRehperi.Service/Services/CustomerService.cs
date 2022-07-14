@@ -20,11 +20,27 @@ namespace KayitRehperi.Service.Services
 
         public async Task<CustomResponseDto<CustomerWithCustomerActivityDto>> GetSingleCustomerByIdWithCustomerActivitiesAsync(int customerId)
         {
-            var category = await _customerRepository.GetSingleCustomerByIdWithCustomerActivitiesAsync(customerId);
+            var customer = await _customerRepository.GetSingleCustomerByIdWithCustomerActivitiesAsync(customerId);
 
-            var categoryDto = _mapper.Map<CustomerWithCustomerActivityDto>(category);
+            var categoryDto = _mapper.Map<CustomerWithCustomerActivityDto>(customer);
 
             return CustomResponseDto<CustomerWithCustomerActivityDto>.Success(200, categoryDto);
+        }
+        public async Task<CustomResponseDto<List<CustomerDto>>> GetCountCustomerByCity()
+        {
+            List<object> customers = await _customerRepository.GetCountCustomerByCity();
+
+
+            var customersDto = _mapper.Map<List<CustomerDto>>(customers);
+            return CustomResponseDto<List<CustomerDto>>.Success(200, customersDto);
+        }
+        public async Task<CustomResponseDto<List<CustomerDto>>> GetCountCustomerByTel()
+        {
+            List<object> customers = await _customerRepository.GetCountCustomerByTel();
+
+
+            var customersDto = _mapper.Map<List<CustomerDto>>(customers);
+            return CustomResponseDto<List<CustomerDto>>.Success(200, customersDto);
         }
     }
 }

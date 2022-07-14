@@ -20,10 +20,18 @@ namespace KayitRehperi.Service.Services
 
         public async Task<CustomResponseDto<List<CustomerWithCustomerActivityDto>>> GetCustomerWithCustomerActivityDto()
         {
-            var products = await _customerActivityRepository.GetCustomerActivitiesWitCategory();
+            var products = await _customerActivityRepository.GetCustomerActivitiesWitCustomer();
 
             var productsDto = _mapper.Map<List<CustomerWithCustomerActivityDto>>(products);
             return CustomResponseDto<List<CustomerWithCustomerActivityDto>>.Success(200, productsDto);
+        }
+        public async Task<CustomResponseDto<List<CutomerActivityDto>>> GetMaxTop5CustomerActivity()
+        {
+            List<object> customersActivities = await _customerActivityRepository.GetMaxTop5CustomerActivity();
+
+
+            var customersDto = _mapper.Map<List<CutomerActivityDto>>(customersActivities);
+            return CustomResponseDto<List<CutomerActivityDto>>.Success(200, customersDto);
         }
 
     }

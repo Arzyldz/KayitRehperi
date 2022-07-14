@@ -2,7 +2,7 @@
 {
     public class CustomerActivity: BaseEntity
     {
-        public string Name { get; set; }
+        public string ActivityName { get; set; }
         public DateTime Date { get; set; }
         public int CustomerId { get; set; }
 
